@@ -10,7 +10,7 @@ public class BookRepository {
         
     }
 
-    HashMap<Integer,Book>dB=new HashMap<>();
+    Map<Integer,Book>dB=new HashMap<>();
     private int id=1;
     public Book save(Book book){
         book.setId(id);
@@ -43,9 +43,7 @@ public class BookRepository {
     }
 
     public void deleteAll(){
-        for(int i:dB.keySet()){
-            dB.remove(i);
-        }
+        dB.clear();
         return;
     }
 
